@@ -1,0 +1,28 @@
+{
+  "name": "boil-the-ocean",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "combine-section-reducers": "^1.0.5",
+    "dateformat": "^3.0.2",
+    "enzyme": "^3.2.0",
+    "history": "^4.7.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^1.0.17",
+    "redux-persist": "^5.4.0",
+    "stylus": "^0.54.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest-cli": "^20.0.4"
+  }
+}

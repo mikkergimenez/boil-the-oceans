@@ -1,0 +1,16 @@
+.header {
+  background-color: black;
+  color: white;
+  font-family: 'Raleway';
+}
+
+.logo {
+  color: white;
+  border-right: 1px solid white;
+  padding: 1em;
+  display: inline-block;
+}
+.logo a {
+  color: white;
+  text-decoration: none;
+}

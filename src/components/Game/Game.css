@@ -1,0 +1,56 @@
+/*
+ * Body
+ */
+.Game.container {
+  width: 50%;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-family: 'Raleway';
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+}
+
+/*
+ * header
+ */
+.Game h1 {
+  font-family: 'Amatic SC';
+}
+
+.Game .blog-header {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+/*
+ * This makes it so clicking a word doesn't show selected text, which is
+ * distracting.
+ */
+.Game::selection {
+  background-color: white;
+}
+
+.Game a {
+  color: #1C9963;
+}
+
+.Game a::selection {
+  background-color: white;
+}
+
+.Game a:hover {
+  color: #105839;
+}
+
+.Game .flash {
+  color: #99251c;
+}
+
+.Game .date {
+  color: #b7b7b7;
+  font-size: 16px;
+  margin-top: -32px;
+}

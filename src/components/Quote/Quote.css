@@ -1,0 +1,94 @@
+.Quote-intro {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Alegreya', serif;
+  font-family: 'Georgia', serif;
+  font-family: 'Spectral SC', serif;
+  font-family: 'Amatic SC';
+  font-weight: 100;
+  font-size: 40px;
+  /*background-color: white;*/
+  padding: 1em;
+  /*-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.50);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.50);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.50);*/
+}
+
+.Quote-container {
+    width: 40%;
+    margin: auto;
+    margin-top: 70vh;
+    line-height: 60px;
+}
+
+.Quote-intro a, .App-intro a:visited {
+  color: #2Ad88D; /* Base #1C9963 */
+  text-decoration: none;
+}
+
+.Quote-intro a:hover {
+  color: #24c47f;
+  text-decoration: none;
+}
+
+.Quote-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/ocean.jpg");
+  background-size: cover;
+  background-repeat: none;
+  z-index: -1;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.author {
+  font-family: 'Spectral SC', serif;
+  line-height: 0px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.fadeIn {
+
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 5s; /* Firefox < 16 */
+        -ms-animation: fadein 5s; /* Internet Explorer */
+         -o-animation: fadein 5s; /* Opera < 12.1 */
+            animation: fadein 5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
