@@ -62,10 +62,15 @@ describe('purchasedTechnologies reducer', () => {
   it('should INCREASE_BUILDING if there is enough energy', () => {
     state.energy = 1000;
 
+    var entireState = {
+      game: {
+        multliplier: "1x"
+      }
+    }
     var newState = reducer(state, {
       type: "INCREASE_BUILDING",
       building: 'axeSharpness'
-    })
+    }, entireState)
 
     expect(newState.energy).toEqual(983);
     expect(newState.people).toEqual(1);

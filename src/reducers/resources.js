@@ -1,8 +1,4 @@
-import { incrementEnergy, techCost, hashKeyContains } from './helpers/resource';
-
-function getInitialState() {
-  return {};
-}
+import { incrementEnergy, techCost } from './helpers/resource';
 
 function incrementReligion(purchasedReligion) {
   var retval = purchasedReligion;
@@ -21,12 +17,12 @@ const mults = {
   "max": 100
 }
 
-
-function getCost(building, count, multiplier, energy) {
+function getCost(building, count: number, multiplier: "1x" | "10x" | "100x" | "max", energy: number): number {
   var sum = 0;
   var after_sum = 0;
   var mult = mults[multiplier];
 
+  console.log(mult);
   for (var x = 0; x < mult; x++) {
     after_sum = sum + Math.floor(building.baseCost * Math.pow(1.15, count + x));
     if (after_sum > energy) {
@@ -38,11 +34,11 @@ function getCost(building, count, multiplier, energy) {
   return sum;
 }
 
-function getPurchaseCount(building, count, multiplier, energy) {
+function getPurchaseCount(building, count: number,  multiplier: "1x" | "10x" | "100x" | "max", energy: number): number {
   var sum = 0;
   var after_sum = 0;
 
-  if (multiplier == "max") {
+  if (multiplier === "max") {
     for (var x = 0; x < 10000; x++) {
       after_sum = sum + Math.floor(building.baseCost * Math.pow(1.15, count + x));
       if (after_sum > energy) {
@@ -51,10 +47,16 @@ function getPurchaseCount(building, count, multiplier, energy) {
       sum = after_sum;
     }
   }
-  return mults[multiplier];
+
+  if (mults[multiplier]) {
+    return mults[multiplier];
+  } else {
+    return 1;
+  }
 }
 
 const resources = (state = {}, action, entireState) => {
+  var cost, purchaseCount;
   switch (action.type) {
     case 'TICK':
       var oldEnergy              = state.energy;
@@ -114,12 +116,11 @@ const resources = (state = {}, action, entireState) => {
       return Object.assign({}, state)
 
     case 'INCREASE_FAITH':
-      console.log("Trying to increase faith");
       var religiousItem      = state.faith[action["religiousItem"]]
       var religiousItemCount = state.purchasedReligion[action["religiousItem"]].count
       // var cost               = Math.floor(religiousItem.baseCost * Math.pow(religiousItem.multiplier, religiousItemCount));
-      var cost               = getCost(religiousItem, religiousItemCount, entireState.game.multiplier, state.inspiration);
-      var purchaseCount      = getPurchaseCount(religiousItem, religiousItemCount, entireState.game.multiplier, state.inspiration);
+      cost               = getCost(religiousItem, religiousItemCount, entireState.game.multiplier, state.inspiration);
+      purchaseCount      = getPurchaseCount(religiousItem, religiousItemCount, entireState.game.multiplier, state.inspiration);
 
       if (state[religiousItem.costs] > cost) {
         state[religiousItem.costs]                              = state[religiousItem.costs] - cost;
@@ -130,12 +131,18 @@ const resources = (state = {}, action, entireState) => {
 
       return Object.assign({}, state)
 
-
     case 'INCREASE_BUILDING':
       var building      = state.buildings[action["building"]]
       var buildingCount = state.purchasedBuildings[action["building"]].count
-      var cost          = getCost(building, buildingCount, entireState.game.multiplier, state.energy);
-      var purchaseCount = getPurchaseCount(building, buildingCount, entireState.game.multiplier, state.energy);
+      cost          = getCost(building, buildingCount, entireState.game.multiplier, state.energy);
+      purchaseCount = getPurchaseCount(building, buildingCount, entireState.game.multiplier, state.energy);
+
+      console.log("--------");
+      console.log(building);
+      console.log(buildingCount);
+      console.log(cost);
+      console.log(purchaseCount);
+      console.log("--------");
 
       if (state[building.costs] > cost) {
         state[building.costs]                              = state[building.costs] - cost;

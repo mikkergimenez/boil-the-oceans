@@ -1,19 +1,13 @@
 import { connect } from 'react-redux';
-import { increaseResource } from '../../actions';
-import { increaseBuilding } from '../../actions/building';
 import UBsComponent from './UBsComponent';
 
 function array_contains(arr, val) {
   for (var item in arr) {
-    if (arr[item] == val) {
+    if (arr[item] === val) {
       return true;
     }
   }
   return false;
-}
-
-const getEnergy = (resources) => {
-  return Math.floor(resources.energy)
 }
 
 function unlockedBuildings(buildings, unlockedBuildings) {

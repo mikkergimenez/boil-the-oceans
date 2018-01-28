@@ -49,7 +49,7 @@ export function getPurchaseCount(building, count, multiplier, energy) {
   var sum = 0;
   var after_sum = 0;
 
-  if (multiplier == "max") {
+  if (multiplier === "max") {
     for (var x = 0; x < 10000; x++) {
       after_sum = sum + Math.floor(building.baseCost * Math.pow(1.15, count + x));
       if (after_sum > energy) {
@@ -62,7 +62,7 @@ export function getPurchaseCount(building, count, multiplier, energy) {
 }
 
 export function canBuy(cost, energy) {
-  if (cost == 0) {
+  if (cost === 0) {
     return true;
   }
   return cost > energy;

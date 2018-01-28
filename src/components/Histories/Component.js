@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Component.css';
-
-import { Link } from 'react-router-dom'
 
 // Inspiration: https://subtle.justgoodthemes.com/how-to-choose-an-interior-designer/
 

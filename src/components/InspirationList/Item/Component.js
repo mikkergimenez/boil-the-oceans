@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const ItemComponent = ({ imageURL, id, name, count, costs, purchaseReligiousItem, purchaseCount, canBuy }) => {
   var purchaseCountButton
-  if (purchaseCount == 1) {
+  if (purchaseCount === 1) {
     purchaseCountButton = <span className="purchase-button-container"><button onClick={purchaseReligiousItem} className="purchase-button" disabled={canBuy} >buy {purchaseCount}</button></span>
   } else {
     purchaseCountButton = <span className="purchase-button-container"><button onClick={purchaseReligiousItem} className="purchase-button" disabled={canBuy} >{purchaseCount}</button></span>
@@ -11,7 +11,7 @@ const ItemComponent = ({ imageURL, id, name, count, costs, purchaseReligiousItem
   return (
   <div className="inspiration-list-item">
     <span>
-      <img className="inspiration-list-image" src={imageURL}/>
+      <img className="inspiration-list-image" alt="Purchaseable Religious" src={imageURL}/>
     </span>
     <span className="text-container">
       <div><a onClick={purchaseReligiousItem}><b>{name}</b></a></div>

@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import React from 'react';
 
 import './GroupComponent.css'
 
@@ -14,21 +12,4 @@ const GroupComponent = ({ name, buildings }) => (
   </p>
 );
 
-export default GroupComponent;
-//
-// const GroupComponent = ({ name, buildings }) => (
-//   <p>
-//     <TransitionGroup>
-//       {Object.keys(buildings).map(function(i) {
-//         return (
-//           <CSSTransition
-//             classNames="buildingsList"
-//             key={buildings[i].id}
-//             timeout={{ enter: 500, exit: 300 }}>
-//             <UnlockedBuilding key={buildings[i].id} building={buildings[i]} />
-//           </CSSTransition>
-//         );
-//       })}
-//     </TransitionGroup>
-//   </p>
-// );
+export default GroupComponent

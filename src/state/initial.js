@@ -6,7 +6,8 @@ export default {
       id: ""
     },
     companyFounding: "",
-    flashMessage: ""
+    flashMessage: "",
+    multiplier: "1x",
   },
   date: '',
   resources: {

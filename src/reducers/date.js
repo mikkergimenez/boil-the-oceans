@@ -36,7 +36,7 @@ Date.prototype.addHours = function(h) {
 const date = (state = initialState(), action, entireState = []) => {
   switch (action.type) {
     case 'TICK':
-      if (state.current == NaN) {
+      if (state.current === NaN) {
         return initialState();
       }
       var new_state = state;

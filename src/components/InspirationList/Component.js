@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ListItemContainer from './Item';
-
-import Icon from '../Icon';
 
 import './Component.css';
 

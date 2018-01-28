@@ -1,6 +1,6 @@
 export function removeDuplicatesUsingFilter(arr){
     let unique_array = arr.filter(function(elem, index, self) {
-        return index == self.indexOf(elem);
+        return index === self.indexOf(elem);
     });
     return unique_array
 }

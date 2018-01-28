@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Component.css';
 
 const Button = ({ multiplier, isActive, setMultiplier }) => (

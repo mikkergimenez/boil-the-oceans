@@ -1,34 +1,10 @@
 import { connect } from 'react-redux';
-import { increaseResource } from '../../actions';
 import { increaseBuilding } from '../../actions/building';
 import ChopWood from './ChopWood';
+import { getIWE, getMyOur, getAmAre } from '../../helpers/text';
 
 const getEnergy = (resources) => {
   return Math.floor(resources.energy)
-}
-
-const getIWE = (people) => {
-  if (people > 1) {
-    return 'we'
-  } else {
-    return 'I'
-  }
-}
-
-const getMyOur = (people) => {
-  if (people > 1) {
-    return 'our'
-  } else {
-    return 'my'
-  }
-}
-
-const getAmAre = (people) => {
-  if (people > 1) {
-    return 'are'
-  } else {
-    return 'am'
-  }
 }
 
 const mapStateToProps = state => {

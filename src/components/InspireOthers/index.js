@@ -3,9 +3,12 @@ import PeopleComponent from './Component';
 
 import { inspireOthers } from '../../actions/resources'
 
+import { getMyOur } from '../../helpers/text'
+
 const mapStateToProps = state => {
   return {
-    numberPeople: state.resources.people
+    numberPeople: state.resources.people,
+    myour: getMyOur(state.resources.people)
   }
 }
 

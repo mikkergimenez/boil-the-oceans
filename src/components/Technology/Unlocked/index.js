@@ -1,6 +1,5 @@
-import { connect } from 'react-redux'
+  import { connect } from 'react-redux'
 
-import { unlockTechnology } from '../../../actions'
 import { openTechnologyStory } from '../../../actions/game'
 
 import Technology from './Component'
@@ -19,7 +18,7 @@ function getUnlockedTechnologyName(techs, purchased_techs, resources) {
 
 function array_contains(arr, val) {
   for (var a in arr) {
-    if (arr[a].name == val) {
+    if (arr[a].name === val) {
       return true
     }
   }

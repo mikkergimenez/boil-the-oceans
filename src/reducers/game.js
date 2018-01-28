@@ -11,7 +11,7 @@ const game = (state = getInitialState(), action, entireState = []) => {
       if (state.flashMessageSeconds > 5) {
         state.flashMessage = "";
       }
-      if (state.flashMessageSeconds == undefined) {
+      if (state.flashMessageSeconds === undefined) {
         state.flashMessageSeconds = 0;
       }
 
@@ -48,8 +48,8 @@ const game = (state = getInitialState(), action, entireState = []) => {
       return Object.assign({}, state);
 
     default:
-      if (state.companyFounding == "" || (state.companyFounding === undefined)) {
-        if (entireState.date != undefined && entireState.date.current != undefined) {
+      if (state.companyFounding === "" || (state.companyFounding === undefined)) {
+        if (entireState.date !== undefined && entireState.date.current !== undefined) {
           state.companyFounding = entireState.date.current
           return Object.assign({}, state)
         }

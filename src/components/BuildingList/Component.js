@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import GroupContainer from './Group';
 
 import BuyMany from '../BuyMany';
-import Icon from '../Icon';
 
 import './Component.css';
 

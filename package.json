@@ -27,6 +27,7 @@
   "devDependencies": {
     "cucumber": "^3.2.1",
     "enzyme-adapter-react-16": "^1.1.1",
+    "flow-bin": "^0.64.0",
     "jest-cli": "^20.0.4"
   }
 }

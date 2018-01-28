@@ -1,5 +1,5 @@
 // If I had a <a onClick={sharpenAxe}>sharper axe</a>, I could chop faster.</span>&nbsp
-import React, { Component } from 'react';
+import React from 'react';
 
 import GroupContainer from './GroupContainer'
 
@@ -10,6 +10,5 @@ const UBsComponent = ({ groups, unlockedBuildings }) => (
     })}
   </span>
 );
-
 
 export default UBsComponent;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Component.css';
 
 const UTHelperComponent = ({ all_resources, all_all }) => {
@@ -10,8 +10,8 @@ const UTHelperComponent = ({ all_resources, all_all }) => {
 
   var technologies = [];
   console.log(all_resources.technologies);
-  for (var i in Object.keys(all_resources.technologies)) {
-    technologies.push(<div key={i}><b>{i}</b> {JSON.stringify(all_resources.technologies[Object.keys(all_resources.technologies)[i]])}</div>);
+  for (var j in Object.keys(all_resources.technologies)) {
+    technologies.push(<div key={j}><b>{j}</b> {JSON.stringify(all_resources.technologies[Object.keys(all_resources.technologies)[j]])}</div>);
   };
 
   return (<span className="JSONBlob">

@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { compose, applyMiddleware, createStore } from 'redux'
+import { createStore } from 'redux'
 import boilTheOcean from './reducers'
 import Root from './Root'
 import './index.css';
@@ -34,6 +34,14 @@ startingState.resources.technologies = technologies;
  */
 if (startingState.resources.purchasedBuildings === [] || startingState.resources.purchasedBuildings === {}) {
   startingState.resources.purchasedBuildings = initialState.purchasedBuildings;
+}
+
+if (startingState.resources.purchasedBuildings.axeSharpness.count == null) {
+  startingState.resources.purchasedBuildings.axeSharpness.count = 1;
+}
+
+if (startingState.game.multiplier == null) {
+  startingState.game.multiplier = "1x";
 }
 
 if (!startingState.resources.unlockedReligion || startingState.resources.unlockedReligion === [] || startingState.resources.unlockedReligion === {}) {

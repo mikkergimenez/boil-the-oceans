@@ -1,18 +1,7 @@
 import { connect } from 'react-redux'
 import GroupComponent from './GroupComponent';
 
-import { increaseBuilding } from '../../actions/building'
-
-function groupBuildings(buildings, group) {
-  var retArr = [];
-  for (var i in buildings) {
-    if (buildings[i].industry == group) {
-      retArr.push(buildings[i]);
-    }
-  }
-
-  return retArr;
-  }
+import { groupBuildings } from '../../helpers/building'
 
 const mapStateToProps = (state, props) => {
   return {

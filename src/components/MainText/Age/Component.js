@@ -1,9 +1,9 @@
 import { connect } from 'react-redux'
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 let AgeText = ({ age, iwe, energy, chopWood }) => {
-  if (age == "wood") {
+  if (age === "wood") {
     return (
       <span>
         <span>The only way {iwe} know how, is to <a onClick={chopWood}> chop wood</a>. </span>
@@ -11,7 +11,7 @@ let AgeText = ({ age, iwe, energy, chopWood }) => {
         <span>So far, I have chopped {energy } cords of Wood.  {iwe.charAt(0).toUpperCase() + iwe.slice(1)} have a long way to go.</span>
       </span>
     );
-  } else if (age == "coal") {
+  } else if (age === "coal") {
     return (
       <span>
         <span>We have enough coal and wood to burn a fire for {energy } more hours.  {iwe.charAt(0).toUpperCase() + iwe.slice(1)} have a long way to go.</span>

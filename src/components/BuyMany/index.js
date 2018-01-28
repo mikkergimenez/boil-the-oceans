@@ -2,8 +2,6 @@ import { connect } from 'react-redux'
 
 import BuyMany from './Component.js'
 
-import React from 'react';
-
 function getMultiplier(multiplier) {
   if (multiplier) {
     return multiplier

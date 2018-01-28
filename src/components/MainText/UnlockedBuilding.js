@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import { increaseResource } from '../../actions';
 import { increaseBuilding } from '../../actions/building';
 import SentenceComponent from './SentenceComponent';
 

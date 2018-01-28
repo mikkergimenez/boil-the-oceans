@@ -4,8 +4,6 @@ import { setMultiplier } from '../../actions/game';
 
 import ButtonComponent from './ButtonComponent.js'
 
-import React from 'react';
-
 function getMultiplier(multiplier) {
   if (multiplier) {
     return multiplier
@@ -15,7 +13,7 @@ function getMultiplier(multiplier) {
 
 function isActive(multiplier, buttonMult) {
   var realMultiplier = getMultiplier(multiplier);
-  return realMultiplier == buttonMult;
+  return realMultiplier === buttonMult;
 }
 
 const mapStateToProps = (state, props) => {

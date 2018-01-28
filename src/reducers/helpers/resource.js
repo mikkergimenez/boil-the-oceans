@@ -2,7 +2,7 @@ export function incrementEnergy(eCount, state) {
   var newCount = eCount
   Object.keys(state.buildings).forEach(function (key) {
 
-    if (key == "axeSharpness") {
+    if (key === "axeSharpness") {
       var peopleMultiplier = state.purchasedReligion["people"].count - 1;
       if (peopleMultiplier > 10) {
         peopleMultiplier = 10;
@@ -28,9 +28,9 @@ export function techCost(state, action) {
   return state.technologies[action.technologyID].cost
 }
 
-export function hashKeyContains(arr, val) {
+export function hashKeyContains(arr, val): boolean {
   for (var a in arr) {
-    if (a == val) {
+    if (a === val) {
       return true
     }
   }

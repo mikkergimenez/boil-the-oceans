@@ -1,24 +1,11 @@
 import { connect } from 'react-redux'
 import Component from './Component';
 
-import { increaseBuilding } from '../../actions/building'
-
 import Mustache from 'mustache';
 import moment from 'moment';
 
 import coalText from './text/coal';
 import lumberText from './text/lumber';
-
-function groupBuildings(buildings, group) {
-  var retArr = [];
-  for (var i in buildings) {
-    if (buildings[i].industry === group) {
-      retArr.push(buildings[i]);
-    }
-  }
-
-  return retArr;
-}
 
 function getRandomTree() {
   var trees = [
