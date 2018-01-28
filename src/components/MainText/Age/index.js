@@ -3,9 +3,8 @@ import { increaseResource } from '../../../actions';
 import Component from './Component';
 
 function array_contains(arr, val) {
-  console.log(arr);
   for (var item in arr) {
-    if (arr[item].name == val) {
+    if (arr[item].name === val) {
       return true;
     }
   }
@@ -26,10 +25,8 @@ const getIWE = (people) => {
 
 const getAge = (purchasedTechnologies) => {
   if (array_contains(purchasedTechnologies, "coal")) {
-    console.log("age is coal");
     return "coal";
   }
-  console.log("age is wood");
   return "wood";
 }
 

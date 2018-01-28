@@ -1,0 +1,34 @@
+.TechnologyStory.block-quote {
+    width: 915px;
+}
+
+.TechnologyStory.container {
+  width: 40%;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-family: 'Raleway';
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+}
+
+.TechnologyStory.blog-header {
+  padding-top: 15vh;
+}
+
+.TechnologyStory.container a {
+  color: #1C9963;
+}
+
+.TechnologyStory.container a:hover {
+  color: #105839;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.TechnologyStory.blog-header hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

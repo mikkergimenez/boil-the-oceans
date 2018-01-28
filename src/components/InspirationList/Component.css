@@ -1,0 +1,103 @@
+.right-bar, .left-bar {
+  display: inline-block;
+  margin-top: 5%;
+  width: 20%;
+  top: 6em;
+  font-size: 14px;
+  padding: .1em;
+  box-sizing: border-box;
+  font-family: 'raleway';
+}
+
+.inspiration {
+  color: #902229;
+  font-size: 20px;
+}
+
+/* .inspiration-list-item img {
+  height: 80px;
+  width: 80px;
+  margin-right: 15px;
+} */
+
+
+.inspiration-list-image {
+  margin-right: 15px;
+  transform: scale(1, 1);
+  width: auto;
+  height: auto;
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.inspiration-per-second {
+  margin-top: 6px;
+  color: #609022;
+  font-size: 16px;
+}
+
+.right-bar .larger {
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  text-transform: lowercase;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.right-bar-contents {
+  padding: 1em;
+  border-top: 5px solid black;
+}
+
+.right-bar h1 a {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #226090;
+    text-decoration: none;
+}
+
+.inspiration-list-item {
+  padding: .5em;
+  border-bottom: 1px dotted #AAA;
+}
+
+.inspiration-list-item a {
+  color: #226090;
+  text-transform: uppercase;
+}
+
+.inspiration-list-item .major-number {
+  color: #222222;
+  font-size: 20px;
+  margin-right: .5em;
+  text-transform: uppercase;
+}
+
+.inspiration-list-item .minor-number {
+  color: #999;
+  text-transform: uppercase;
+}
+
+.inspiration-list-item .purchase-button-container {
+  margin-top: 4px;
+}
+
+.inspiration-list-item .purchase-button {
+  padding: 1em;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.inspiration-list-item .text-container {
+  width: 45%;
+}
+
+.inspiration-list-item span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inspiration-list-item span:last-child {
+  display: inline-block;
+}

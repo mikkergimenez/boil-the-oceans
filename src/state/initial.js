@@ -1,11 +1,17 @@
 export default {
   game: {
-    started: false
+    started: false,
+    technologyStory: {
+      shown: false,
+      id: ""
+    },
+    companyFounding: "",
+    flashMessage: ""
   },
   date: '',
   resources: {
     energy: 0,
-    people: 1,
+    people: 1, // This should be one again when we merge
     inspiration: 0,
     buildings: {
 
@@ -13,17 +19,30 @@ export default {
     technologies: {
 
     },
-    unlockedBuildings: ["axeSharpness"],
+
+    unlockedReligion: ["people"],
+
+    purchasedReligion: {
+      people: {
+        count: 1
+      },
+      evangelist: {
+        count: 0
+      },
+      bishop: {
+        count: 0
+      }
+    },
 
     purchasedTechnologies: [], // {name, date}
 
+    unlockedBuildings: [],
     purchasedBuildings: {
       axeSharpness: {
         count: 1
       }
     }
-
-  },
+  }
 }
 
 // Cursor	                15	            0.1

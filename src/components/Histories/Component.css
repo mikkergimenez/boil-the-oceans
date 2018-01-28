@@ -1,0 +1,164 @@
+.cover-image {
+  width: 100%;
+  height: 100%;
+}
+
+.industry-blog-container {
+  overflow: scroll;
+  height: 100vh;
+}
+
+.cover-image-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+  /* margin-bottom: 3em; */
+  background-size: cover;
+}
+
+hr {
+  width: 10%;
+  border-color: orange;
+}
+
+.cover-title {
+  padding-top: 15%;
+}
+
+.cover-title h1, .cover-title h2 {
+  color: white;
+  font-family: 'Spectral SC', serif;
+}
+
+.Blog.container {
+  display: block;
+  padding-top: 3em;
+  width: 1080px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.subject {
+  color: orange;
+  font-size: 30px;
+  font-family: 'Spectral SC', serif;
+}
+
+.Blog p {
+  text-indent: 50px;
+  font-size: 21px;
+  line-height: 1.89;
+  letter-spacing: -.003em;
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+header {
+  height: 12px;
+  background-color: black;
+  padding: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* Technology Styles */
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+}
+
+.half-image-container {
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+  float: left;
+  display: inline-block;
+  margin-bottom: 3em;
+}
+
+body {
+  height: 100%;
+}
+
+hr {
+  width: 10%;
+  border-color: orange;
+}
+
+.cover-title {
+  padding-top: 15%;
+}
+
+.cover-title h1, .cover-title h2 {
+  color: white;
+  font-family: 'Spectral SC', serif;
+}
+
+.Blog img {
+  display: block;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.Blog .image-caption {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  margin-top: -1em;
+  margin-bottom: 2em;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.Blog.half-container {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  display: inline-block;
+  padding-top: 3em;
+  margin: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  overflow: scroll;
+  height: 90vh;
+  color: #335;
+  line-height: 2em;
+}
+
+.Blog p {
+  text-indent: 50px;
+  font-size: 21px;
+  line-height: 1.89;
+  letter-spacing: -.003em;
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+header {
+  height: 12px;
+  background-color: black;
+  padding: 20px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.text-muted {
+  color: #777;
+}
+
+.sub-heading {
+  margin-top: -25px;
+  margin-bottom: 30px;
+}

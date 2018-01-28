@@ -1,9 +1,11 @@
 import { connect } from 'react-redux'
+
+import { truncatedNumber } from '../../helpers/number';
 import BuildingComponent from './Component';
 
 function array_contains(arr, val) {
   for (var item in arr) {
-    if (arr[item] == val) {
+    if (arr[item] === val) {
       return true;
     }
   }
@@ -30,13 +32,25 @@ function unlockedBuildings(resources) {
   return buildingsToShow;
 }
 
+function closerToGodUnlocked(state) {
+  for (var i in state.resources.purchasedTechnologies) {
+    if (state.resources.purchasedTechnologies[i].name === "closeToGod") {
+      return true
+    }
+  }
+  return false;
+}
+
+
 const mapStateToProps = (state, props) => {
   return {
-    energy: state.resources.energy.toFixed(0),
-    people: state.resources.people.toFixed(0),
+    energy: truncatedNumber(state.resources.energy),
+    energyName: "Wood",
+    energyPerSecond: truncatedNumber(state.resources.energyPerSecond),
     inspiration: state.resources.inspiration.toFixed(0),
     buildings: unlockedBuildings(state.resources),
     groups: listOfGroups(unlockedBuildings(state.resources)),
+    show: closerToGodUnlocked(state),
   }
 }
 

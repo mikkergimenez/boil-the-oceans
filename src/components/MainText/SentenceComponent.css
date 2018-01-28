@@ -1,0 +1,22 @@
+.paragraph-button {
+  border: 0;
+  font-family: 'Raleway';
+  font-size: 21px;
+  color: #1C9963;
+  padding: 0;
+}
+
+.paragraph-button:active {
+  border: 0;
+  color: #188355
+}
+
+.paragraph-button:hover {
+  border: 0;
+  color: #105839
+}
+
+.paragraph-button:focus {
+  border: 0;
+  outline: 0;
+}

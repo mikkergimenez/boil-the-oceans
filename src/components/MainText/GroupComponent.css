@@ -1,0 +1,26 @@
+.buildingsList-enter {
+  opacity: 0.01;
+}
+
+.buildingsList-enter.buildingsList-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.buildingsList-exit {
+  opacity: 1;
+}
+
+.buildingsList-exit.buildingsList-exit-active {
+  opacity: 0.01;
+  transition: opacity 360ms ease-in;
+}
+
+.buildingsList-appear {
+  opacity: 0.01;
+}
+
+.buildingsList-appear.buildingsList-appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}

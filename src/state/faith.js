@@ -1,0 +1,82 @@
+export default {
+  people: {
+    id: 'people',
+    text: {
+      beforeLink: "With",
+      link: "sharper axes, ",
+      afterLink: "we could chop faster."
+    },
+    name: "People",
+    baseCost: 100,
+    multiplier: 1.15,
+    costs: "inspiration",
+    incomeResource: 'inspiration',
+    incomeRate: 1,
+    industry: "faith",
+  },
+  evangelist: {
+    id: 'evangelist',
+    text: {
+      beforeLink: "But we should be investing in the newer technologies, like these saws!  The",
+      link: "two person teams ",
+      afterLink: "we can form will perform as efficiently as five persons did before!",
+    },
+    name: "Evangelist",
+    peopleCost: 1,
+    baseCost: 1000,
+    multiplier: 1.15,
+    costs: "inspiration",
+    incomeResource: 'people',
+    incomeRate: 1,
+    industry: "faith",
+  },
+  bishop: {
+    id: 'bishop',
+    text: {
+      beforeLink: "But we should be investing in the newer technologies, like these saws!  The",
+      link: "two person teams ",
+      afterLink: "we can form will perform as efficiently as five persons did before!",
+    },
+    name: "Bishop",
+    peopleCost: 1,
+    baseCost: 10000,
+    multiplier: 1.15,
+    costs: "inspiration",
+    incomeResource: "evangelist",
+    incomeRate: 1,
+    industry: "faith",
+  },
+  archbishop: {
+    id: 'archbishop',
+    text: {
+      beforeLink: "But we should be investing in the newer technologies, like these saws!  The",
+      link: "two person teams ",
+      afterLink: "we can form will perform as efficiently as five persons did before!",
+    },
+    name: "Archbishop",
+    peopleCost: 1,
+    baseCost: 100000,
+    multiplier: 1.15,
+    costs: "inspiration",
+    incomeResource: "bishop",
+    incomeRate: 1,
+    industry: "faith",
+  },
+  seminary: {
+    id: 'seminary',
+    text: {
+      beforeLink: "But we should be investing in the newer technologies, like these saws!  The",
+      link: "two person teams ",
+      afterLink: "we can form will perform as efficiently as five persons did before!",
+    },
+    name: "Seminary",
+    peopleCost: 1000,
+    baseCost: 1000000,
+    multiplier: 1.15,
+    costs: "inspiration",
+    incomeResource: "archbishop",
+    incomeRate: 1,
+    industry: "faith",
+  }
+
+}

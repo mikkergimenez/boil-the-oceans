@@ -6,7 +6,8 @@ import React from 'react';
 
 const mapStateToProps = state => {
   return {
-    started: state.game.started
+    started: state.game.started,
+    showTechnologyStory: state.game.technologyStory.shown
   }
 }
 

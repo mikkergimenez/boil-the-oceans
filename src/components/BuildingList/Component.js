@@ -1,25 +1,33 @@
 import React, { Component } from 'react';
-import GroupContainer from './GroupContainer';
 
+import GroupContainer from './Group';
+
+import BuyMany from '../BuyMany';
 import Icon from '../Icon';
 
 import './Component.css';
 
-const BuildingList = ({ energy, people, inspiration, buildings, groups }) => (
-  <div className="right-bar">
+const BuildingList = ({ energy, energyPerSecond, inspiration, buildings, groups, show }) => {
+  if (!show) {
+    return (<div></div>)
+  }
+
+  var energyName = "Wood"
+  return (
+  <span className="right-bar">
+    <BuyMany />
     <div className="right-bar-contents">
-      <div className="text-muted larger">God whispers into my ear</div>
+      <div className="text-muted larger">god whispers into my ear</div>
       <br />
-      <br />
-      <div className="resources">e:{energy} p:{people} i:{inspiration}</div>
-      <br /><br />
+      <div className="energy">{energy} {energyName}</div>
+      <div className="energy-per-second">{energyPerSecond}/sec</div>
       <div className="row">
         {Object.keys(groups).map(function(i) {
           return (<GroupContainer key={i} group={groups[i]} buildings={buildings} />);
         })}
       </div>
     </div>
-  </div>
-);
+  </span>);
+};
 
 export default BuildingList;

@@ -1,4 +1,8 @@
 .App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
 }
 
 .App-logo {

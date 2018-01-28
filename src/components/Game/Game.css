@@ -2,8 +2,10 @@
  * Body
  */
 .Game.container {
+  display: inline-block;
+  margin-left: 5%;
+  margin-right: 5%;
   width: 50%;
-  margin: auto;
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
@@ -33,8 +35,25 @@
   background-color: white;
 }
 
+.Game p {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+}
+
 .Game a {
   color: #1C9963;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
 }
 
 .Game a::selection {
@@ -53,4 +72,31 @@
   color: #b7b7b7;
   font-size: 16px;
   margin-top: -32px;
+}
+
+.buildingsList-enter {
+  opacity: 0.01;
+}
+
+.fadeOutOnly-enter.fadeOutOnly-enter-active {
+  opacity: 1;
+  transition: opacity 0ms ease-in;
+}
+
+.fadeOutOnly-exit {
+  opacity: 1;
+}
+
+.fadeOutOnly-exit.fadeOutOnly-exit-active {
+  opacity: 0.01;
+  transition: opacity 1s ease-in;
+}
+
+.fadeOutOnly-appear {
+  opacity: 0.01;
+}
+
+.fadeOutOnly-appear.fadeOutOnly-appear-active {
+  opacity: 1;
+  transition: opacity 0s ease-in;
 }

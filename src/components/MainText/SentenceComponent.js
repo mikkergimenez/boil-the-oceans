@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
+import './SentenceComponent.css'
+
 const SentenceComponent = ({ amare, myyour, iwe, beforeText, link, afterText, purchaseBuilding }) => (
   <span>
-    {beforeText} <a onClick={() => purchaseBuilding()}>{link}</a> {afterText}&nbsp;
+    {beforeText} <button className="paragraph-button" onClick={() => purchaseBuilding()}>{link}</button> {afterText}&nbsp;
   </span>
 )
 

@@ -3,19 +3,29 @@ import './Component.css';
 
 import PropTypes from 'prop-types';
 
+import TechnologyStory from '../Technology/Story'
 import BuildingList from '../BuildingList';
 import Game from '../Game';
+import InspirationList from '../InspirationList';
 import Quote from '../Quote';
 
 
-const App = ({ started }) => {
+const App = ({ started, showTechnologyStory }) => {
   if (started) {
-    return (
-      <div className="App">
-        <Game />
-        <BuildingList />
+    if (showTechnologyStory) {
+      return (<div className="App">
+        <TechnologyStory />
       </div>
     );
+    } else {
+      return (
+        <div className="App">
+          <InspirationList />
+          <Game />
+          <BuildingList />
+        </div>
+      );
+    }
   } else {
     return (
       <div className="App">

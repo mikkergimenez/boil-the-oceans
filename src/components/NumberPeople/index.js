@@ -3,7 +3,7 @@ import PeopleComponent from './Component';
 
 const mapStateToProps = state => {
   return {
-    people: state.resources.people
+    people: state.resources.purchasedReligion["people"].count
   }
 }
 

@@ -1,13 +1,23 @@
 .right-bar {
-  position: fixed;
+  display: inline-block;
+  margin-top: 5%;
   width: 20%;
-  top: 10em;
-  right: 5%;
+  top: 6em;
   font-size: 14px;
   padding: .1em;
   box-sizing: border-box;
   font-family: 'raleway';
-  border-top: 5px solid black;
+}
+
+.energy {
+  color: #902229;
+  font-size: 20px;
+}
+
+.energy-per-second {
+  margin-top: 6px;
+  color: #609022;
+  font-size: 16px;
 }
 
 .right-bar .larger {
